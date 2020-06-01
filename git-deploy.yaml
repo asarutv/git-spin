@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nggit
-        image: chelibane/jsapp
+        image: nginx
         ports:
         - containerPort: 80
 ---
