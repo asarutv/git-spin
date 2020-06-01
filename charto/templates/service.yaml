@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: {{ include "charto.fullname" . }}
   labels:
+    environment: {{ .Values.environment }}
+    demo: "{{ .Values.demo }}"
     {{- include "charto.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}

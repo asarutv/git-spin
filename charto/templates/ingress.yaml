@@ -10,6 +10,8 @@ kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
+    environment: {{ .Values.environment }}
+    demo: "{{ .Values.demo }}"
     {{- include "charto.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:
